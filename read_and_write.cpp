@@ -16,7 +16,6 @@ int main(){
     ofstream outfile;
     // opening the studentData.txt file
     infile.open("studentData.txt");
-    outfile.open("output.txt", ios::app);
     infile >> name >> gender >> age >> feeBalance >> averageScore >> grade;
     cout << "Name: " << name << endl;
     cout << "Gender: " << gender << endl;
@@ -24,6 +23,7 @@ int main(){
     cout << "Fee Balance: " << feeBalance << endl;
     cout << "Average Score: " << averageScore << endl;
     cout << "Grade: " << grade << endl;
+    outfile.open("output.txt", ios::app);
     outfile << name <<endl;
     outfile << gender << endl;
     outfile << age << endl;
